@@ -364,9 +364,9 @@ function Navbar() {
 
   return (
     <nav
-      className={`fixed top-6 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl z-50 transition-all duration-700 ${scrolled
-        ? "glass rounded-[2rem] py-3 px-8 shadow-premium"
-        : "bg-transparent py-5 px-8"
+      className={`fixed top-4 sm:top-6 left-1/2 -translate-x-1/2 w-[96%] sm:w-[95%] max-w-6xl z-50 transition-all duration-700 ${scrolled
+        ? "glass rounded-[2rem] py-2.5 sm:py-3 px-5 sm:px-8 shadow-premium"
+        : "bg-transparent py-4 sm:py-5 px-5 sm:px-8"
         }`}
     >
       <div className="flex items-center justify-between">
@@ -459,7 +459,7 @@ function Navbar() {
    ═══════════════════════════════════════════════════════ */
 function Hero() {
   return (
-    <section className="relative min-h-[110vh] flex items-center overflow-hidden pt-32 pb-20">
+    <section className="relative min-h-screen lg:min-h-[110vh] flex items-center overflow-hidden pt-28 sm:pt-32 pb-16 sm:pb-20">
       {/* Background with mesh-like blobs */}
       <div className="absolute inset-0 bg-[#FDFCFA]" />
 
@@ -468,11 +468,11 @@ function Hero() {
       <div className="absolute bottom-[0%] left-[-5%] w-[40vw] h-[40vw] bg-sage-200/30 rounded-full blur-[100px] animate-float" style={{ animationDelay: '-2s' }} />
       <div className="absolute top-[20%] left-[20%] w-[30vw] h-[30vw] bg-accent-400/20 rounded-full blur-[80px] animate-pulse-soft" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-8 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         {/* Left Content */}
         <div className="text-center lg:text-left">
           <div className="animate-fade-in-up">
-            <span className="inline-flex items-center gap-2 bg-white px-5 py-2.5 rounded-full text-xs font-bold tracking-widest uppercase text-sage-600 border border-sage-100 shadow-sm mb-10">
+            <span className="inline-flex items-center gap-2 bg-white px-4 sm:px-5 py-2 sm:py-2.5 rounded-full text-[10px] sm:text-xs font-bold tracking-widest uppercase text-sage-600 border border-sage-100 shadow-sm mb-6 sm:mb-10">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-sage-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-sage-500"></span>
@@ -481,22 +481,22 @@ function Hero() {
             </span>
           </div>
 
-          <h1 className="animate-reveal text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.1] mb-10">
+          <h1 className="animate-reveal text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-[1.15] sm:leading-[1.1] mb-6 sm:mb-10">
             <span className="text-sage-950 text-gradient-sage">ดูแลบุตรหลาน</span>
             <br />
             <span className="text-sage-900">อย่างพรีเมียม</span>
           </h1>
 
-          <p className="animate-fade-in-up delay-200 text-sage-600 text-xl lg:text-2xl leading-relaxed mb-12 max-w-xl mx-auto lg:mx-0 font-medium">
+          <p className="animate-fade-in-up delay-200 text-sage-600 text-base sm:text-xl lg:text-2xl leading-relaxed mb-8 sm:mb-12 max-w-xl mx-auto lg:mx-0 font-medium">
             สัมผัสประสบการณ์การดูแลบุตรหลานยุคใหม่
             <span className="text-sage-900 block mt-2">ง่าย ปลอดภัย และอัจฉริยะที่สุด</span>
           </p>
 
-          <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-6 justify-center lg:justify-start">
+          <div className="animate-fade-in-up delay-300 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center lg:justify-start">
             <a
               href="/KidGuard.apk"
               download
-              className="group relative overflow-hidden bg-sage-800 text-white px-10 py-5 rounded-[2rem] text-xl font-bold transition-all shadow-premium hover:shadow-sage-glow hover:-translate-y-1"
+              className="group relative overflow-hidden bg-sage-800 text-white px-8 sm:px-10 py-4 sm:py-5 rounded-[2rem] text-lg sm:text-xl font-bold transition-all shadow-premium hover:shadow-sage-glow hover:-translate-y-1"
             >
               <div className="relative z-10 flex items-center gap-3">
                 <DownloadIcon className="w-7 h-7 group-hover:translate-y-1 transition-transform" />
@@ -506,7 +506,7 @@ function Hero() {
             </a>
             <a
               href="#features"
-              className="glass px-10 py-5 rounded-[2rem] text-xl font-bold text-sage-800 hover:bg-white hover:shadow-premium transition-all hover:-translate-y-1 flex items-center gap-2 justify-center"
+              className="glass px-8 sm:px-10 py-4 sm:py-5 rounded-[2rem] text-lg sm:text-xl font-bold text-sage-800 hover:bg-white hover:shadow-premium transition-all hover:-translate-y-1 flex items-center gap-2 justify-center"
             >
               สำรวจฟีเจอร์
               <ChevronDown />
@@ -514,24 +514,24 @@ function Hero() {
           </div>
 
           {/* New Premium Stats */}
-          <div className="animate-fade-in-up delay-400 mt-16 grid grid-cols-3 gap-8 max-w-lg mx-auto lg:mx-0">
+          <div className="animate-fade-in-up delay-400 mt-10 sm:mt-16 grid grid-cols-3 gap-4 sm:gap-8 max-w-lg mx-auto lg:mx-0">
             <div>
-              <div className="text-3xl font-black text-sage-900 leading-none mb-2">100%</div>
+              <div className="text-2xl sm:text-3xl font-black text-sage-900 leading-none mb-1.5 sm:mb-2">100%</div>
               <div className="text-[10px] font-bold text-sage-400 uppercase tracking-widest">Privacy Secured</div>
             </div>
-            <div className="border-l border-sage-200 pl-8">
-              <div className="text-3xl font-black text-sage-900 leading-none mb-2">Android</div>
+            <div className="border-l border-sage-200 pl-4 sm:pl-8">
+              <div className="text-2xl sm:text-3xl font-black text-sage-900 leading-none mb-1.5 sm:mb-2">Android</div>
               <div className="text-[10px] font-bold text-sage-400 uppercase tracking-widest">Full Platform</div>
             </div>
-            <div className="border-l border-sage-200 pl-8">
-              <div className="text-3xl font-black text-sage-900 leading-none mb-2">FREE</div>
+            <div className="border-l border-sage-200 pl-4 sm:pl-8">
+              <div className="text-2xl sm:text-3xl font-black text-sage-900 leading-none mb-1.5 sm:mb-2">FREE</div>
               <div className="text-[10px] font-bold text-sage-400 uppercase tracking-widest">Open Source</div>
             </div>
           </div>
         </div>
 
         {/* Right Content */}
-        <div className="relative animate-float pt-10 lg:pt-0">
+        <div className="relative animate-float pt-6 sm:pt-10 lg:pt-0">
           <div className="absolute inset-0 bg-sage-500/10 blur-[100px] rounded-full" />
           <ThreePhoneMockup />
         </div>
@@ -549,41 +549,41 @@ function Features() {
   return (
     <section
       id="features"
-      className="relative py-32 bg-white overflow-hidden"
+      className="relative py-20 sm:py-32 bg-white overflow-hidden"
       ref={ref}
     >
       {/* Soft Background Accent */}
       <div className="absolute top-0 right-0 w-[30vw] h-[30vw] bg-sage-50 rounded-full blur-[100px] opacity-60" />
 
-      <div className="max-w-7xl mx-auto px-8 relative z-10">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8 relative z-10">
         {/* Header */}
         <div
-          className={`text-center mb-24 ${inView ? "animate-fade-in-up" : "opacity-0"}`}
+          className={`text-center mb-14 sm:mb-24 ${inView ? "animate-fade-in-up" : "opacity-0"}`}
         >
-          <h2 className="text-4xl sm:text-5xl font-black text-sage-950 mb-6 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-sage-950 mb-4 sm:mb-6 tracking-tight">
             ฟีเจอร์ที่ออกแบบมา<br /><span className="text-gradient-sage">เพื่อความสบายใจของคุณ</span>
           </h2>
-          <p className="text-sage-500 text-xl max-w-2xl mx-auto font-medium">
+          <p className="text-sage-500 text-base sm:text-xl max-w-2xl mx-auto font-medium">
             รวมทุกเทคโนโลยีเพื่อการดูแลบุตรหลานอย่างรอบด้าน ใช้งานง่ายเพียงปลายนิ้วสัมผัส
           </p>
         </div>
 
         {/* Bento-ish Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-8">
           {FEATURES.slice(0, 6).map((f, i) => (
             <div
               key={i}
-              className={`group card-hover glass p-10 rounded-[2.5rem] border border-sage-100 ${inView ? "animate-fade-in-up" : "opacity-0"
-                } ${i === 0 || i === 4 ? "md:col-span-2" : ""}`}
+              className={`group card-hover glass p-6 sm:p-10 rounded-[2rem] sm:rounded-[2.5rem] border border-sage-100 ${inView ? "animate-fade-in-up" : "opacity-0"
+                } ${i === 0 || i === 4 ? "sm:col-span-2 md:col-span-2" : ""}`}
               style={{ animationDelay: `${i * 0.1}s` }}
             >
-              <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${f.color} text-white flex items-center justify-center mb-10 shadow-lg group-hover:rotate-6 transition-transform`}>
+              <div className={`w-12 h-12 sm:w-16 sm:h-16 rounded-xl sm:rounded-2xl bg-gradient-to-br ${f.color} text-white flex items-center justify-center mb-6 sm:mb-10 shadow-lg group-hover:rotate-6 transition-transform`}>
                 {f.icon}
               </div>
-              <h3 className="text-2xl font-bold text-sage-900 mb-4 tracking-tight">
+              <h3 className="text-xl sm:text-2xl font-bold text-sage-900 mb-3 sm:mb-4 tracking-tight">
                 {f.title}
               </h3>
-              <p className="text-sage-600 text-lg leading-relaxed font-medium">
+              <p className="text-sage-600 text-base sm:text-lg leading-relaxed font-medium">
                 {f.desc}
               </p>
             </div>
@@ -604,24 +604,24 @@ function HowToUse() {
   return (
     <section
       id="how-to-use"
-      className="relative py-32 bg-gradient-to-br from-sage-50 via-white to-sage-100/30"
+      className="relative py-20 sm:py-32 bg-gradient-to-br from-sage-50 via-white to-sage-100/30"
       ref={ref}
     >
-      <div className="max-w-7xl mx-auto px-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-8">
         {/* Header */}
         <div
-          className={`text-center mb-24 ${inView ? "animate-fade-in-up" : "opacity-0"}`}
+          className={`text-center mb-14 sm:mb-24 ${inView ? "animate-fade-in-up" : "opacity-0"}`}
         >
-          <h2 className="text-4xl sm:text-5xl font-black text-sage-950 mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black text-sage-950 mb-4 sm:mb-6">
             เริ่มต้นดูแล<br /><span className="text-gradient-sage">ใน 3 ขั้นตอนง่ายๆ</span>
           </h2>
-          <p className="text-sage-500 text-xl max-w-2xl mx-auto font-medium">
+          <p className="text-sage-500 text-base sm:text-xl max-w-2xl mx-auto font-medium">
             ติดตั้งง่าย ไม่ยุ่งยาก พร้อมระบบความปลอดภัยระดับพรีเมียม
           </p>
         </div>
 
         {/* Quick Start Steps */}
-        <div className="grid md:grid-cols-3 gap-12 mb-32">
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8 md:gap-12 mb-20 sm:mb-32">
           {STEPS.map((s, i) => (
             <div
               key={i}
@@ -631,14 +631,14 @@ function HowToUse() {
               {i < STEPS.length - 1 && (
                 <div className="hidden md:block absolute top-20 left-[70%] w-full h-[2px] bg-gradient-to-r from-sage-200 to-transparent -z-10" />
               )}
-              <div className="bg-white rounded-[3rem] p-12 text-center shadow-premium group-hover:shadow-sage-glow transition-all duration-500 hover:-translate-y-3 border border-sage-50">
-                <div className="absolute top-8 left-8 w-12 h-12 bg-sage-900 rounded-2xl flex items-center justify-center text-white text-xl font-black rotate-[-10deg] group-hover:rotate-0 transition-transform">
+              <div className="bg-white rounded-[2rem] sm:rounded-[3rem] p-8 sm:p-12 text-center shadow-premium group-hover:shadow-sage-glow transition-all duration-500 hover:-translate-y-3 border border-sage-50">
+                <div className="absolute top-5 left-5 sm:top-8 sm:left-8 w-10 h-10 sm:w-12 sm:h-12 bg-sage-900 rounded-xl sm:rounded-2xl flex items-center justify-center text-white text-lg sm:text-xl font-black rotate-[-10deg] group-hover:rotate-0 transition-transform">
                   {s.step}
                 </div>
-                <div className="w-24 h-24 mx-auto bg-sage-50 rounded-[2rem] flex items-center justify-center text-sage-600 mb-8 group-hover:scale-110 transition-transform shadow-inner">
+                <div className="w-16 h-16 sm:w-24 sm:h-24 mx-auto bg-sage-50 rounded-[1.5rem] sm:rounded-[2rem] flex items-center justify-center text-sage-600 mb-6 sm:mb-8 group-hover:scale-110 transition-transform shadow-inner">
                   {s.icon}
                 </div>
-                <h3 className="text-2xl font-black text-sage-900 mb-4">
+                <h3 className="text-xl sm:text-2xl font-black text-sage-900 mb-3 sm:mb-4">
                   {s.title}
                 </h3>
                 <p className="text-sage-500 leading-relaxed font-medium">
@@ -651,19 +651,19 @@ function HowToUse() {
 
         {/* Detailed Guide — Parent / Child Tabs */}
         <div className={inView ? "animate-fade-in-up delay-400" : "opacity-0"}>
-          <div className="glass max-w-5xl mx-auto rounded-[3.5rem] p-12 border border-white/60 shadow-premium">
-            <h3 className="text-center text-3xl font-black text-sage-950 mb-4">
+          <div className="glass max-w-5xl mx-auto rounded-[2rem] sm:rounded-[3.5rem] p-6 sm:p-12 border border-white/60 shadow-premium">
+            <h3 className="text-center text-2xl sm:text-3xl font-black text-sage-950 mb-3 sm:mb-4">
               คู่มือการใช้งานเชิงลึก
             </h3>
-            <p className="text-center text-sage-500 text-lg mb-12 font-medium">
+            <p className="text-center text-sage-500 text-base sm:text-lg mb-8 sm:mb-12 font-medium">
               เลือกบทบาทเพื่อดูวิธีการตั้งค่าอย่างละเอียด
             </p>
 
             {/* Tab Buttons */}
-            <div className="flex justify-center gap-4 mb-16">
+            <div className="flex justify-center gap-3 sm:gap-4 mb-10 sm:mb-16">
               <button
                 onClick={() => setActiveTab("parent")}
-                className={`px-10 py-5 rounded-[2rem] font-bold text-lg transition-all flex items-center gap-3 ${activeTab === "parent"
+                className={`px-6 sm:px-10 py-3.5 sm:py-5 rounded-[1.5rem] sm:rounded-[2rem] font-bold text-base sm:text-lg transition-all flex items-center gap-2 sm:gap-3 ${activeTab === "parent"
                   ? "bg-sage-900 text-white shadow-xl translate-y-[-4px]"
                   : "bg-sage-50 text-sage-600 hover:bg-sage-100"
                   }`}
@@ -672,7 +672,7 @@ function HowToUse() {
               </button>
               <button
                 onClick={() => setActiveTab("child")}
-                className={`px-10 py-5 rounded-[2rem] font-bold text-lg transition-all flex items-center gap-3 ${activeTab === "child"
+                className={`px-6 sm:px-10 py-3.5 sm:py-5 rounded-[1.5rem] sm:rounded-[2rem] font-bold text-base sm:text-lg transition-all flex items-center gap-2 sm:gap-3 ${activeTab === "child"
                   ? "bg-sage-900 text-white shadow-xl translate-y-[-4px]"
                   : "bg-sage-50 text-sage-600 hover:bg-sage-100"
                   }`}
@@ -685,23 +685,23 @@ function HowToUse() {
             </div>
 
             {/* Tab Content */}
-            <div className="grid sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
               {(activeTab === "parent" ? PARENT_STEPS : CHILD_STEPS).map(
                 (item, i) => (
                   <div
                     key={`${activeTab}-${i}`}
-                    className="bg-white/50 p-8 rounded-[2rem] border border-sage-100 hover:bg-white hover:shadow-premium transition-all duration-300 group"
+                    className="bg-white/50 p-5 sm:p-8 rounded-[1.5rem] sm:rounded-[2rem] border border-sage-100 hover:bg-white hover:shadow-premium transition-all duration-300 group"
                   >
-                    <div className="flex items-center gap-5 mb-5">
-                      <div className="w-14 h-14 rounded-2xl bg-sage-50 flex items-center justify-center text-sage-700 group-hover:scale-110 transition-transform group-hover:bg-sage-900 group-hover:text-white">
+                    <div className="flex items-center gap-4 sm:gap-5 mb-4 sm:mb-5">
+                      <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-xl sm:rounded-2xl bg-sage-50 flex items-center justify-center text-sage-700 group-hover:scale-110 transition-transform group-hover:bg-sage-900 group-hover:text-white">
                         {item.icon}
                       </div>
                       <span className="text-xs font-black text-sage-400 uppercase tracking-widest">
                         Step {i + 1}
                       </span>
                     </div>
-                    <h4 className="text-xl font-black text-sage-900 mb-3">{item.title}</h4>
-                    <p className="text-sage-600 leading-relaxed font-medium">
+                    <h4 className="text-lg sm:text-xl font-black text-sage-900 mb-2 sm:mb-3">{item.title}</h4>
+                    <p className="text-sage-600 leading-relaxed font-medium text-sm sm:text-base">
                       {item.desc}
                     </p>
                   </div>
@@ -714,107 +714,118 @@ function HowToUse() {
         {/* ── Installation Guide Section ── */}
         <div className={`mt-24 max-w-4xl mx-auto ${inView ? "animate-fade-in-up delay-600" : "opacity-0"}`}>
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-amber-50 px-5 py-2 rounded-full text-xs font-bold tracking-widest uppercase text-amber-600 border border-amber-100 mb-6">
+          <div className="text-center mb-14">
+            <div className="inline-flex items-center gap-2 bg-amber-50 px-5 py-2.5 rounded-full text-[11px] font-bold tracking-widest uppercase text-amber-600 border border-amber-100 mb-6">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-4 h-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
               </svg>
               สำคัญ — อ่านก่อนติดตั้ง
             </div>
-            <h3 className="text-3xl sm:text-4xl font-black text-sage-950 mb-3">
+            <h3 className="text-3xl sm:text-4xl font-black text-sage-950 mb-4">
               คู่มือติดตั้ง APK
             </h3>
-            <p className="text-sage-500 text-lg font-medium max-w-2xl mx-auto">
+            <p className="text-sage-500 text-lg font-medium max-w-xl mx-auto leading-relaxed">
               เนื่องจากแอปยังไม่ได้อยู่บน Play Store จึงต้องตั้งค่าเล็กน้อยก่อนติดตั้ง
             </p>
           </div>
 
           {/* Card 1: Allow Unknown Sources */}
-          <div className="glass rounded-[2.5rem] p-10 border border-amber-100/50 mb-8">
-            <div className="flex items-center gap-5 mb-8">
-              <div className="w-16 h-16 rounded-[1.5rem] bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center flex-shrink-0 text-white shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-8 h-8">
+          <div className="bg-white rounded-[2.5rem] p-6 sm:p-10 border border-sage-100 shadow-premium mb-8">
+            {/* Card Header */}
+            <div className="flex items-center gap-4 sm:gap-5 mb-8 pb-6 border-b border-sage-100">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center flex-shrink-0 text-white shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-7 h-7 sm:w-8 sm:h-8">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
                 </svg>
               </div>
               <div>
-                <h4 className="text-2xl font-black text-sage-900">อนุญาตติดตั้งจากแหล่งที่ไม่รู้จัก</h4>
-                <p className="text-sage-500 text-sm font-medium mt-1">ขั้นตอนเปิดสิทธิ์ติดตั้งไฟล์ APK</p>
+                <h4 className="text-xl sm:text-2xl font-black text-sage-900 leading-tight">อนุญาตติดตั้งจากแหล่งที่ไม่รู้จัก</h4>
+                <p className="text-sage-400 text-sm font-medium mt-1">ขั้นตอนเปิดสิทธิ์ติดตั้งไฟล์ APK</p>
               </div>
             </div>
 
-            <div className="space-y-5">
-              {[
-                { step: "1", text: <>เปิด <span className="bg-sage-100 text-sage-800 px-2.5 py-0.5 rounded-lg font-bold text-sm">ตั้งค่า (Settings)</span> บนมือถือ</> },
-                { step: "2", text: <>ไปที่ <span className="bg-sage-100 text-sage-800 px-2.5 py-0.5 rounded-lg font-bold text-sm">แอป & การแจ้งเตือน</span> หรือ <span className="bg-sage-100 text-sage-800 px-2.5 py-0.5 rounded-lg font-bold text-sm">ความปลอดภัย</span> (แล้วแต่ยี่ห้อมือถือ)</> },
-                { step: "3", text: <>เลือก <span className="bg-sage-100 text-sage-800 px-2.5 py-0.5 rounded-lg font-bold text-sm">การเข้าถึงพิเศษ → ติดตั้งแอปที่ไม่รู้จัก</span></> },
-                { step: "4", text: <>เลือกแอปที่ใช้ดาวน์โหลด (เช่น <span className="font-bold text-sage-900">Chrome</span> หรือ <span className="font-bold text-sage-900">Files</span>) แล้วเปิด <span className="text-sage-900 font-bold">"อนุญาตจากแหล่งนี้"</span></> },
-                { step: "5", text: <>กลับไปเปิดไฟล์ <span className="font-bold text-sage-900">KidGuard.apk</span> ที่ดาวน์โหลดมา แล้วกด <span className="font-bold text-sage-900">"ติดตั้ง"</span></> },
-              ].map((item) => (
-                <div key={item.step} className="flex items-start gap-4 bg-white/60 p-5 rounded-2xl border border-sage-100 hover:bg-white hover:shadow-md transition-all group">
-                  <div className="w-10 h-10 rounded-xl bg-sage-900 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
-                    {item.step}
-                  </div>
-                  <p className="text-sage-700 font-medium leading-relaxed pt-1.5">{item.text}</p>
-                </div>
-              ))}
+            {/* Steps */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-sage-50/80 border border-sage-100/60 hover:bg-white hover:shadow-sm transition-all group">
+                <div className="w-9 h-9 rounded-xl bg-sage-900 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">1</div>
+                <p className="text-sage-700 font-medium text-[15px]">เปิด <strong className="text-sage-900">ตั้งค่า (Settings)</strong> บนมือถือ</p>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-sage-50/80 border border-sage-100/60 hover:bg-white hover:shadow-sm transition-all group">
+                <div className="w-9 h-9 rounded-xl bg-sage-900 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">2</div>
+                <p className="text-sage-700 font-medium text-[15px]">ไปที่ <strong className="text-sage-900">แอป & การแจ้งเตือน</strong> หรือ <strong className="text-sage-900">ความปลอดภัย</strong> (แล้วแต่ยี่ห้อมือถือ)</p>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-sage-50/80 border border-sage-100/60 hover:bg-white hover:shadow-sm transition-all group">
+                <div className="w-9 h-9 rounded-xl bg-sage-900 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">3</div>
+                <p className="text-sage-700 font-medium text-[15px]">เลือก <strong className="text-sage-900">การเข้าถึงพิเศษ</strong> → <strong className="text-sage-900">ติดตั้งแอปที่ไม่รู้จัก</strong></p>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-sage-50/80 border border-sage-100/60 hover:bg-white hover:shadow-sm transition-all group">
+                <div className="w-9 h-9 rounded-xl bg-sage-900 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">4</div>
+                <p className="text-sage-700 font-medium text-[15px]">เลือกแอปที่ใช้ดาวน์โหลด (เช่น <strong className="text-sage-900">Chrome</strong> หรือ <strong className="text-sage-900">Files</strong>) แล้วเปิด <strong className="text-sage-900">"อนุญาตจากแหล่งนี้"</strong></p>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-sage-50/80 border border-sage-100/60 hover:bg-white hover:shadow-sm transition-all group">
+                <div className="w-9 h-9 rounded-xl bg-sage-900 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">5</div>
+                <p className="text-sage-700 font-medium text-[15px]">กลับไปเปิดไฟล์ <strong className="text-sage-900">KidGuard.apk</strong> ที่ดาวน์โหลดมา แล้วกด <strong className="text-sage-900">"ติดตั้ง"</strong></p>
+              </div>
             </div>
 
             {/* Quick Tip */}
-            <div className="mt-6 bg-sage-50 rounded-2xl p-5 border border-sage-100 flex items-start gap-4">
-              <div className="w-8 h-8 rounded-lg bg-sage-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-5 h-5 text-sage-700">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
-                </svg>
-              </div>
+            <div className="mt-6 bg-sage-50 rounded-2xl p-4 sm:p-5 border border-sage-100 flex items-start gap-3">
+              <span className="text-lg flex-shrink-0 mt-0.5">💡</span>
               <p className="text-sage-600 text-sm font-medium leading-relaxed">
-                <span className="font-bold text-sage-800">เคล็ดลับ:</span> เมนูอาจแตกต่างกันไปตามยี่ห้อมือถือ หากหาไม่เจอให้ลองค้นหาคำว่า <span className="bg-white px-2 py-0.5 rounded-md font-bold text-sage-800 border border-sage-200">"ติดตั้งแอปที่ไม่รู้จัก"</span> ในช่องค้นหาของตั้งค่า
+                <strong className="text-sage-800">เคล็ดลับ:</strong> เมนูอาจแตกต่างกันไปตามยี่ห้อมือถือ หากหาไม่เจอให้ลองค้นหาคำว่า <strong className="text-sage-800">"ติดตั้งแอปที่ไม่รู้จัก"</strong> ในช่องค้นหาของตั้งค่า
               </p>
             </div>
           </div>
 
           {/* Card 2: Disable Google Play Protect */}
-          <div className="glass rounded-[2.5rem] p-10 border border-blue-100/50">
-            <div className="flex items-center gap-5 mb-8">
-              <div className="w-16 h-16 rounded-[1.5rem] bg-gradient-to-br from-blue-400 to-blue-500 flex items-center justify-center flex-shrink-0 text-white shadow-lg">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-8 h-8">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 3l8.735 8.735m0 0a.374.374 0 11.53.53m-.53-.53l.53.53m0 0L21 21M14.652 9.348a3.75 3.75 0 010 5.304m2.121-7.425a6.75 6.75 0 010 9.546m2.122-11.667a9.75 9.75 0 010 13.788" />
+          <div className="bg-white rounded-[2.5rem] p-6 sm:p-10 border border-sage-100 shadow-premium">
+            {/* Card Header */}
+            <div className="flex items-center gap-4 sm:gap-5 mb-6 pb-6 border-b border-sage-100">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-2xl bg-gradient-to-br from-blue-400 to-blue-500 flex items-center justify-center flex-shrink-0 text-white shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7 sm:w-8 sm:h-8">
+                  <path fillRule="evenodd" d="M12.516 2.17a.75.75 0 0 0-1.032 0 11.209 11.209 0 0 1-7.877 3.08.75.75 0 0 0-.722.515A12.74 12.74 0 0 0 2.25 9.75c0 5.942 4.064 10.933 9.563 12.348a.749.749 0 0 0 .374 0c5.499-1.415 9.563-6.406 9.563-12.348 0-1.39-.223-2.73-.635-3.985a.75.75 0 0 0-.722-.516l-.143.001c-2.996 0-5.717-1.17-7.734-3.08Zm3.094 8.016a.75.75 0 1 0-1.22-.872l-3.236 4.53L9.53 12.22a.75.75 0 0 0-1.06 1.06l2.25 2.25a.75.75 0 0 0 1.14-.094l3.75-5.25Z" clipRule="evenodd" />
                 </svg>
               </div>
               <div>
-                <h4 className="text-2xl font-black text-sage-900">ปิด Google Play Protect <span className="text-sm font-bold text-blue-500">(ชั่วคราว)</span></h4>
-                <p className="text-sage-500 text-sm font-medium mt-1">หากติดตั้งแล้วขึ้นคำเตือน "แอปนี้อาจเป็นอันตราย"</p>
+                <h4 className="text-xl sm:text-2xl font-black text-sage-900 leading-tight">ปิด Google Play Protect <span className="text-sm font-bold text-blue-500">(ชั่วคราว)</span></h4>
+                <p className="text-sage-400 text-sm font-medium mt-1">หากติดตั้งแล้วขึ้นคำเตือน "แอปนี้อาจเป็นอันตราย"</p>
               </div>
             </div>
 
-            {/* Warning Banner */}
-            <div className="bg-blue-50 rounded-2xl p-5 border border-blue-100 mb-8 flex items-start gap-4">
-              <div className="w-8 h-8 rounded-lg bg-blue-200 flex items-center justify-center flex-shrink-0 mt-0.5">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 text-blue-700">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
-                </svg>
-              </div>
+            {/* Info Banner */}
+            <div className="bg-blue-50 rounded-2xl p-4 sm:p-5 border border-blue-100 mb-6 flex items-start gap-3">
+              <span className="text-lg flex-shrink-0 mt-0.5">ℹ️</span>
               <p className="text-blue-700 text-sm font-medium leading-relaxed">
-                Google Play Protect อาจบล็อกการติดตั้งแอปที่ไม่ได้มาจาก Play Store เนื่องจากแอปของเรายังอยู่ในขั้นตอนพัฒนา แอปจึงยังไม่ได้ลงทะเบียนกับ Google ถือว่าปลอดภัย — <span className="font-bold">ติดตั้งเสร็จแล้วเปิด Play Protect กลับได้เลย</span>
+                Google Play Protect อาจบล็อกการติดตั้งแอปที่ไม่ได้มาจาก Play Store เนื่องจากแอปยังอยู่ในขั้นตอนพัฒนาจึงยังไม่ได้ลงทะเบียน — <strong>ติดตั้งเสร็จแล้วเปิด Play Protect กลับได้เลย</strong>
               </p>
             </div>
 
-            <div className="space-y-5">
-              {[
-                { step: "1", text: <>เปิดแอป <span className="font-bold text-sage-900">Google Play Store</span> บนมือถือ</> },
-                { step: "2", text: <>แตะ <span className="font-bold text-sage-900">รูปโปรไฟล์</span> ที่มุมขวาบน → เลือก <span className="bg-blue-50 text-blue-800 px-2.5 py-0.5 rounded-lg font-bold text-sm border border-blue-100">Play Protect</span></> },
-                { step: "3", text: <>แตะ <span className="font-bold text-sage-900">ไอคอนรูปเฟือง ⚙️</span> ที่มุมขวาบน</> },
-                { step: "4", text: <>ปิดสวิตช์ <span className="bg-red-50 text-red-700 px-2.5 py-0.5 rounded-lg font-bold text-sm border border-red-100">"สแกนแอปด้วย Play Protect"</span> แล้วกดยืนยัน</> },
-                { step: "5", text: <>กลับไป<span className="font-bold text-sage-900">ติดตั้ง KidGuard.apk</span> ได้ตามปกติ</> },
-                { step: "6", text: <>✅ <span className="font-bold text-emerald-700">หลังติดตั้งเสร็จ</span> → กลับไปเปิด Play Protect เหมือนเดิม เพื่อความปลอดภัย</> },
-              ].map((item) => (
-                <div key={item.step} className="flex items-start gap-4 bg-white/60 p-5 rounded-2xl border border-sage-100 hover:bg-white hover:shadow-md transition-all group">
-                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform ${item.step === "6" ? "bg-emerald-600" : "bg-blue-600"}`}>
-                    {item.step === "6" ? "✓" : item.step}
-                  </div>
-                  <p className="text-sage-700 font-medium leading-relaxed pt-1.5">{item.text}</p>
-                </div>
-              ))}
+            {/* Steps */}
+            <div className="space-y-3">
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-blue-50/50 border border-blue-100/40 hover:bg-white hover:shadow-sm transition-all group">
+                <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">1</div>
+                <p className="text-sage-700 font-medium text-[15px]">เปิดแอป <strong className="text-sage-900">Google Play Store</strong> บนมือถือ</p>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-blue-50/50 border border-blue-100/40 hover:bg-white hover:shadow-sm transition-all group">
+                <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">2</div>
+                <p className="text-sage-700 font-medium text-[15px]">แตะ <strong className="text-sage-900">รูปโปรไฟล์</strong> ที่มุมขวาบน → เลือก <strong className="text-sage-900">Play Protect</strong></p>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-blue-50/50 border border-blue-100/40 hover:bg-white hover:shadow-sm transition-all group">
+                <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">3</div>
+                <p className="text-sage-700 font-medium text-[15px]">แตะ <strong className="text-sage-900">ไอคอนรูปเฟือง ⚙️</strong> ที่มุมขวาบน</p>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-blue-50/50 border border-blue-100/40 hover:bg-white hover:shadow-sm transition-all group">
+                <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">4</div>
+                <p className="text-sage-700 font-medium text-[15px]">ปิดสวิตช์ <strong className="text-red-600">"สแกนแอปด้วย Play Protect"</strong> แล้วกดยืนยัน</p>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-blue-50/50 border border-blue-100/40 hover:bg-white hover:shadow-sm transition-all group">
+                <div className="w-9 h-9 rounded-xl bg-blue-600 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">5</div>
+                <p className="text-sage-700 font-medium text-[15px]">กลับไป <strong className="text-sage-900">ติดตั้ง KidGuard.apk</strong> ได้ตามปกติ</p>
+              </div>
+              <div className="flex items-center gap-4 p-4 rounded-2xl bg-emerald-50 border border-emerald-100 group">
+                <div className="w-9 h-9 rounded-xl bg-emerald-600 flex items-center justify-center text-white font-black text-sm flex-shrink-0">✓</div>
+                <p className="text-emerald-800 font-semibold text-[15px]">หลังติดตั้งเสร็จ → กลับไปเปิด Play Protect เหมือนเดิม เพื่อความปลอดภัย</p>
+              </div>
             </div>
           </div>
         </div>
@@ -842,7 +853,7 @@ function Footer() {
   return (
     <footer
       id="about-project"
-      className="relative pt-32 pb-0 bg-sage-950 overflow-hidden"
+      className="relative pt-20 sm:pt-32 pb-0 bg-sage-950 overflow-hidden"
       ref={ref}
     >
       {/* Background Decor */}
@@ -856,7 +867,7 @@ function Footer() {
           onClick={() => setSelectedMember(null)}
         >
           <div
-            className="bg-sage-900 border border-white/10 rounded-[2.5rem] w-full max-w-lg overflow-hidden animate-fade-in-up shadow-2xl relative"
+            className="bg-sage-900 border border-white/10 rounded-[1.5rem] sm:rounded-[2.5rem] w-full max-w-lg overflow-hidden animate-fade-in-up shadow-2xl relative max-h-[95vh] overflow-y-auto"
             onClick={(e) => e.stopPropagation()}
           >
             <button
@@ -868,11 +879,11 @@ function Footer() {
               </svg>
             </button>
 
-            <div className="relative h-72 sm:h-96">
+            <div className="relative h-56 sm:h-72 md:h-96">
               <img src={selectedMember.img} alt={selectedMember.name} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-sage-900 via-sage-900/40 to-transparent" />
-              <div className="absolute bottom-8 left-8 right-8">
-                <h4 className="text-white text-3xl sm:text-4xl font-black mb-2">{selectedMember.name}</h4>
+              <div className="absolute bottom-5 left-5 right-5 sm:bottom-8 sm:left-8 sm:right-8">
+                <h4 className="text-white text-2xl sm:text-3xl md:text-4xl font-black mb-2">{selectedMember.name}</h4>
                 <div className="flex items-center gap-3">
                   <span className="w-2 h-2 bg-sage-500 rounded-full animate-pulse"></span>
                   <p className="text-sage-400 font-bold text-sm uppercase tracking-widest">{selectedMember.role}</p>
@@ -880,12 +891,12 @@ function Footer() {
               </div>
             </div>
 
-            <div className="p-8 pt-6 pb-12 overflow-y-auto max-h-[60vh] custom-scrollbar">
+            <div className="p-5 sm:p-8 pt-4 sm:pt-6 pb-8 sm:pb-12 overflow-y-auto max-h-[50vh] sm:max-h-[60vh] custom-scrollbar">
               <div className="space-y-6">
                 {/* BIO Section */}
                 <div className="p-6 rounded-2xl bg-white/5 border border-white/5">
                   <h5 className="text-sage-500 text-[10px] font-black uppercase tracking-widest mb-3 opacity-60">ประวัติการทำงาน / บทบาท</h5>
-                  <p className="text-sage-100 leading-relaxed font-medium text-lg">
+                  <p className="text-sage-100 leading-relaxed font-medium text-base sm:text-lg">
                     {selectedMember.bio}
                   </p>
                 </div>
@@ -947,10 +958,10 @@ function Footer() {
         </div>
       )}
 
-      <div className="relative z-10 max-w-6xl mx-auto px-8">
-        <div className={`text-center mb-16 ${inView ? "animate-fade-in-up" : "opacity-0"}`}>
-          <h3 className="text-3xl sm:text-4xl font-black text-white mb-4">เกี่ยวกับโปรเจกต์</h3>
-          <p className="text-sage-400 font-medium max-w-2xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto px-5 sm:px-8">
+        <div className={`text-center mb-10 sm:mb-16 ${inView ? "animate-fade-in-up" : "opacity-0"}`}>
+          <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white mb-3 sm:mb-4">เกี่ยวกับโปรเจกต์</h3>
+          <p className="text-sage-400 font-medium max-w-2xl mx-auto text-sm sm:text-base">
             โปรเจกต์จบการศึกษา — สาขาเทคโนโลยีสารสนเทศและการสื่อสารดิจิทัล
             คณะวิทยาศาสตร์และเทคโนโลยี มหาวิทยาลัยเทคโนโลยีราชมงคลธัญบุรี
           </p>
@@ -958,13 +969,13 @@ function Footer() {
 
         {/* 1. Team Members — Full Width */}
         <div className={`mb-12 ${inView ? "animate-fade-in-up delay-100" : "opacity-0"}`}>
-          <div className="bg-white/5 backdrop-blur-md rounded-[2.5rem] p-10 border border-white/10">
-            <h4 className="text-white text-xl font-bold mb-10 text-center flex items-center justify-center gap-4">
+          <div className="bg-white/5 backdrop-blur-md rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 border border-white/10">
+            <h4 className="text-white text-lg sm:text-xl font-bold mb-8 sm:mb-10 text-center flex items-center justify-center gap-4">
               <span className="w-12 h-px bg-sage-500/30"></span>
               ทีมผู้พัฒนาแอปพลิเคชัน
               <span className="w-12 h-px bg-sage-500/30"></span>
             </h4>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 sm:gap-12">
               {[
                 {
                   name: "นางสาว ปัณฑารีย์ ภูมิพลับ",
@@ -1025,7 +1036,7 @@ function Footer() {
                     <img
                       src={m.img}
                       alt={m.name}
-                      className="relative w-32 h-32 rounded-[2rem] object-cover ring-2 ring-white/10 group-hover:ring-sage-500/50 transition-all duration-500 shadow-lg"
+                      className="relative w-24 h-24 sm:w-32 sm:h-32 rounded-[1.5rem] sm:rounded-[2rem] object-cover ring-2 ring-white/10 group-hover:ring-sage-500/50 transition-all duration-500 shadow-lg"
                     />
                     <div className="absolute inset-0 bg-sage-500/10 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                       <svg className="w-8 h-8 text-white scale-75 group-hover:scale-100 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -1034,7 +1045,7 @@ function Footer() {
                       </svg>
                     </div>
                   </div>
-                  <h5 className="text-white font-bold text-lg mb-1 group-hover:text-sage-400 transition-colors">{m.name}</h5>
+                  <h5 className="text-white font-bold text-base sm:text-lg mb-1 group-hover:text-sage-400 transition-colors">{m.name}</h5>
                   <p className="text-sage-600 text-[10px] uppercase tracking-widest font-black opacity-0 group-hover:opacity-100 transition-all duration-300 transform translate-y-2 group-hover:translate-y-0">คลิกเพื่อดูประวัติ</p>
                 </div>
               ))}
@@ -1043,10 +1054,10 @@ function Footer() {
         </div>
 
         {/* 2. Advisors & University — Side by Side */}
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 mb-12">
           {/* Advisors */}
-          <div className={`bg-white/5 backdrop-blur-md rounded-[2.5rem] p-10 border border-white/10 ${inView ? "animate-fade-in-up delay-200" : "opacity-0"}`}>
-            <h4 className="text-white text-xl font-bold mb-8 flex items-center gap-4">
+          <div className={`bg-white/5 backdrop-blur-md rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 border border-white/10 ${inView ? "animate-fade-in-up delay-200" : "opacity-0"}`}>
+            <h4 className="text-white text-lg sm:text-xl font-bold mb-6 sm:mb-8 flex items-center gap-4">
               <span className="w-2 h-2 bg-sage-500 rounded-full"></span>
               อาจารย์ที่ปรึกษา
             </h4>
@@ -1073,8 +1084,8 @@ function Footer() {
           </div>
 
           {/* University */}
-          <div className={`bg-white/5 backdrop-blur-md rounded-[2.5rem] p-10 border border-white/10 flex flex-col justify-center ${inView ? "animate-fade-in-up delay-300" : "opacity-0"}`}>
-            <h4 className="text-white text-xl font-bold mb-8 flex items-center gap-4">
+          <div className={`bg-white/5 backdrop-blur-md rounded-[2rem] sm:rounded-[2.5rem] p-6 sm:p-10 border border-white/10 flex flex-col justify-center ${inView ? "animate-fade-in-up delay-300" : "opacity-0"}`}>
+            <h4 className="text-white text-lg sm:text-xl font-bold mb-6 sm:mb-8 flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-sage-500/20 flex items-center justify-center text-sage-400 border border-white/5">
                 <svg viewBox="0 0 24 24" className="w-6 h-6" fill="currentColor">
                   <path d="M12 3L2 8V11H4V18H3V20H21V18H20V11H22V8L12 3M18 11V18H16V11H18M13 11V18H11V11H13M8 11V18H6V11H8M12 5L19 8.5L12 12L5 8.5L12 5Z" />
@@ -1163,8 +1174,8 @@ function Footer() {
       </div>
 
       {/* 4. Bottom Strip Footer Band */}
-      <div className={`mt-10 border-t border-white/5 bg-black/40 backdrop-blur-md pt-6 pb-6 ${inView ? "animate-fade-in delay-500" : "opacity-0"}`}>
-        <div className="max-w-6xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div className={`mt-10 border-t border-white/5 bg-black/40 backdrop-blur-md py-5 sm:py-6 ${inView ? "animate-fade-in delay-500" : "opacity-0"}`}>
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 flex flex-col md:flex-row justify-between items-center gap-4 sm:gap-6">
           {/* Left: Brand */}
           <div className="flex items-center gap-3">
             <img src="/assets/Kid_Guard.png" alt="KidGuard" className="w-8 h-8 rounded-lg opacity-80" />

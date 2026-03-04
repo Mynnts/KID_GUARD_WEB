@@ -261,19 +261,19 @@ const ParentDashboardScreenMock = () => (
 
 const ThreePhoneMockup = () => {
     return (
-        <div className="relative w-full max-w-2xl px-4 py-24 flex items-center justify-center scale-[0.7] lg:scale-[0.85]">
+        <div className="relative w-full max-w-2xl px-4 py-12 sm:py-24 flex items-center justify-center scale-[0.55] sm:scale-[0.65] md:scale-[0.7] lg:scale-[0.85]">
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[160%] h-[160%] -z-10 pointer-events-none">
                 <div className="absolute top-[10%] right-[10%] w-[600px] h-[600px] bg-[#6B9080]/15 rounded-full blur-[100px]" />
                 <div className="absolute bottom-[10%] left-[10%] w-[700px] h-[700px] bg-[#CCE3DE]/25 rounded-full blur-[120px]" />
             </div>
 
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[95px] z-10 opacity-70 scale-[0.88] -rotate-[12deg] transition-all duration-700 hover:opacity-100 hover:rotate-0 hover:scale-[1.0] hover:z-40 cursor-pointer animate-float" style={{ animationDelay: '-1.5s' }}>
+            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[95px] z-10 opacity-70 scale-[0.88] -rotate-[12deg] transition-all duration-700 hover:opacity-100 hover:rotate-0 hover:scale-[1.0] hover:z-40 cursor-pointer animate-float hidden sm:block" style={{ animationDelay: '-1.5s' }}>
                 <PhoneFrame scale={0.9}>
                     <ChildHomeScreenMock />
                 </PhoneFrame>
             </div>
 
-            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[95px] z-10 opacity-70 scale-[0.90] rotate-[10deg] transition-all duration-700 hover:opacity-100 hover:rotate-0 hover:scale-[1.0] hover:z-40 cursor-pointer animate-float" style={{ animationDelay: '-3s' }}>
+            <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[95px] z-10 opacity-70 scale-[0.90] rotate-[10deg] transition-all duration-700 hover:opacity-100 hover:rotate-0 hover:scale-[1.0] hover:z-40 cursor-pointer animate-float hidden sm:block" style={{ animationDelay: '-3s' }}>
                 <PhoneFrame scale={0.92}>
                     <ParentDashboardScreenMock />
                 </PhoneFrame>
@@ -286,7 +286,7 @@ const ThreePhoneMockup = () => {
                 </PhoneFrame>
             </div>
 
-            <div className="absolute -top-16 -right-20 z-50 bg-white/95 backdrop-blur-md shadow-2xl rounded-[24px] p-6 border border-white/40 flex items-center gap-4 animate-float hidden md:flex" style={{ animationDelay: '-0.8s' }}>
+            <div className="absolute -top-16 -right-20 z-50 bg-white/95 backdrop-blur-md shadow-2xl rounded-[24px] p-6 border border-white/40 flex items-center gap-4 animate-float hidden lg:flex" style={{ animationDelay: '-0.8s' }}>
                 <div className="w-14 h-14 bg-gradient-to-br from-[#6B9080] to-[#84A98C] rounded-2xl flex items-center justify-center text-white shadow-lg shadow-[#6B9080]/30 text-3xl">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-8 h-8">
                         <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
