@@ -29,15 +29,19 @@ const ChildHomeScreenMock = () => (
         <div className="p-[24px] pt-[60px] flex flex-col items-center">
             {/* _buildPointsCard */}
             <div className="w-full bg-gradient-to-br from-[#6B9080] to-[#84A98C] p-[20px] rounded-[28px] shadow-lg shadow-[#6B9080]/25 flex items-center gap-[16px] text-white mb-9">
-                <div className="w-[56px] h-[56px] bg-white/20 rounded-[16px] flex items-center justify-center">
-                    <span className="text-3xl">⭐</span>
+                <div className="w-[56px] h-[56px] bg-white/20 rounded-[16px] flex items-center justify-center text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-8 h-8">
+                        <path fillRule="evenodd" d="M10.788 3.21c.448-1.077 1.976-1.077 2.424 0l2.082 5.006 5.404.434c1.164.093 1.636 1.545.749 2.305l-4.117 3.527 1.257 5.273c.271 1.136-.964 2.033-1.96 1.425L12 18.354 7.373 21.18c-.996.608-2.231-.29-1.96-1.425l1.257-5.273-4.117-3.527c-.887-.76-.415-2.212.749-2.305l5.404-.434 2.082-5.005Z" clipRule="evenodd" />
+                    </svg>
                 </div>
                 <div className="flex-1">
                     <p className="text-white/80 text-[14px] font-medium leading-none">แต้มสะสม</p>
                     <p className="text-[28px] font-bold mt-1 leading-none">1,250 pts</p>
                 </div>
                 <div className="bg-white/20 px-3 py-1.5 rounded-full flex items-center gap-1.5">
-                    <span className="text-sm">🏆</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4 text-amber-300">
+                        <path fillRule="evenodd" d="M5.166 2.621v.858c-1.035.148-2.059.33-3.071.543a.75.75 0 0 0-.584.859 6.753 6.753 0 0 0 6.138 5.6 6.73 6.73 0 0 0 2.743 1.346v3.307H7.75a.75.75 0 0 0 0 1.5h8.5a.75.75 0 0 0 0-1.5h-2.643v-3.307a6.73 6.73 0 0 0 2.743-1.346 6.753 6.753 0 0 0 6.138-5.6.75.75 0 0 0-.584-.859c-1.012-.213-2.036-.395-3.071-.543v-.858a1.5 1.5 0 0 0-1.5-1.5H6.666a1.5 1.5 0 0 0-1.5 1.5ZM6.666 2.621h10.668v.722a45.951 45.951 0 0 0-10.668 0v-.722Zm-3.922 2.56a48.113 48.113 0 0 0 3.155.336c.2.02.404.037.61.05v7.217a5.251 5.251 0 0 1-3.765-7.603Zm18.512 0a5.251 5.251 0 0 1-3.765 7.603V5.567c.206-.013.41-.031.61-.05a48.113 48.113 0 0 0 3.155-.336Z" clipRule="evenodd" />
+                    </svg>
                     <span className="text-[13px] font-bold">Level 13</span>
                 </div>
             </div>
@@ -154,7 +158,11 @@ const ParentDashboardScreenMock = () => (
                 <div className="flex-shrink-0 w-[140px] h-[160px] p-4 rounded-[28px] bg-gradient-to-br from-[#6B9080] to-[#84A98C] shadow-lg shadow-[#6B9080]/20 flex flex-col justify-between">
                     <div className="flex justify-between">
                         <div className="relative">
-                            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-2xl">👦</div>
+                            <div className="w-12 h-12 rounded-full bg-white/20 flex items-center justify-center text-white">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-7 h-7">
+                                    <path fillRule="evenodd" d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z" clipRule="evenodd" />
+                                </svg>
+                            </div>
                             <div className="absolute bottom-0 right-0 w-3.5 h-3.5 bg-green-500 rounded-full border-2 border-[#6B9080]" />
                         </div>
                         <div className="bg-white/20 px-2.5 py-1 rounded-lg text-[10px] font-bold text-white uppercase">Active</div>
@@ -169,7 +177,11 @@ const ParentDashboardScreenMock = () => (
                 </div>
                 <div className="flex-shrink-0 w-[140px] h-[160px] p-4 rounded-[28px] bg-white border border-[#F0F5F2] flex flex-col justify-between">
                     <div className="flex justify-between">
-                        <div className="w-12 h-12 rounded-full bg-[#f2f6f3] flex items-center justify-center text-2xl">👧</div>
+                        <div className="w-12 h-12 rounded-full bg-[#f2f6f3] flex items-center justify-center text-slate-400">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-7 h-7">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z" />
+                            </svg>
+                        </div>
                         <div className="bg-slate-50 px-2.5 py-1 rounded-lg text-[10px] font-bold text-slate-400 uppercase">Offline</div>
                     </div>
                     <div>
@@ -200,7 +212,11 @@ const ParentDashboardScreenMock = () => (
                     </div>
                 </div>
                 <div className="bg-white/12 p-3.5 rounded-[16px] flex items-center gap-3">
-                    <div className="w-8 h-8 bg-[#10B981]/30 rounded-lg flex items-center justify-center text-white text-lg">📉</div>
+                    <div className="w-8 h-8 bg-white/20 rounded-lg flex items-center justify-center text-white">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
+                            <path fillRule="evenodd" d="M2.25 13.5a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 .75.75v.75a.75.75 0 0 1-.75.75H3a.75.75 0 0 1-.75-.75v-.75Zm3.364-1.838a.75.75 0 0 1 1.06 0l.75.75a.75.75 0 1 1-1.06 1.06l-.75-.75a.75.75 0 0 1 0-1.06Zm12.728 0a.75.75 0 0 1 0 1.06l-.75.75a.75.75 0 1 1-1.06-1.06l.75-.75a.75.75 0 0 1 1.06 0Zm1.838 1.838a.75.75 0 0 1 .75-.75h.75a.75.75 0 0 1 .75.75v.75a.75.75 0 0 1-.75.75h-.75a.75.75 0 0 1-.75-.75v-.75Zm-6.192-3.834a.75.75 0 0 1 0 1.06l-.75.75a.75.75 0 1 1-1.06-1.06l.75-.75a.75.75 0 0 1 1.06 0Zm3.834 0a.75.75 0 0 1 1.06 0l.75.75a.75.75 0 1 1-1.06 1.06l-.75-.75a.75.75 0 0 1 0-1.06ZM12 4.5a.75.75 0 0 1 .75.75v.75a.75.75 0 0 1-1.5 0v-.75A.75.75 0 0 1 12 4.5ZM.75 12a.75.75 0 0 1 .75.75h.142c.448 0 .808.363.808.811 0 .393-.275.698-.59.8a3.75 3.75 0 1 0 4.643 4.643c.102-.315.407-.59.8-.59.448 0 .811.36.811.808v.142a.75.75 0 0 1-1.5 0v-.118a2.25 2.25 0 1 1-2.924-2.924h.118a.75.75 0 0 1 0 1.5h-.118a.75.75 0 1 0 1.424 1.424v-.118a.75.75 0 0 1 1.5 0v.118a3.75 3.75 0 0 1-3.75 3.75H5.25a3.75 3.75 0 0 1-3.75-3.75v-.75a3.75 3.75 0 0 1 3.75-3.75h.75a.75.75 0 0 1 0 1.5H5.25a2.25 2.25 0 0 0-2.25 2.25v.75a2.25 2.25 0 1 0 4.5 0v-.75a.75.75 0 0 1 .75-.75H12Z" clipRule="evenodd" />
+                        </svg>
+                    </div>
                     <span className="text-white text-[14px] font-medium flex-1">12% less than yesterday</span>
                     <svg className="w-3.5 h-3.5 text-white/40" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="3"><path d="M9 5l7 7-7 7" /></svg>
                 </div>
@@ -222,15 +238,19 @@ const ParentDashboardScreenMock = () => (
             <h4 className="text-[#1F2937] text-[18px] font-bold mb-4">Quick Actions</h4>
             <div className="grid grid-cols-3 gap-3">
                 {[
-                    { l: 'Time Limit', i: '⏰', c: '#6B9080' },
-                    { l: 'App Block', i: '🚫', c: '#EF4444' },
-                    { l: 'Location', i: '📍', c: '#3B82F6' },
-                    { l: 'Schedule', i: '📅', c: '#F59E0B' },
-                    { l: 'Pause', i: '⏸️', c: '#EF4444' },
-                    { l: 'Rewards', i: '🏆', c: '#8B5CF6' },
+                    { l: 'Time Limit', path: 'M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z', c: '#6B9080' },
+                    { l: 'App Block', path: 'M18.364 18.364A9 9 0 0 0 5.636 5.636m12.728 12.728A9 9 0 0 1 5.636 5.636m12.728 12.728L5.636 5.636', c: '#EF4444' },
+                    { l: 'Location', path: 'M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z', c: '#3B82F6' },
+                    { l: 'Schedule', path: 'M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z', c: '#F59E0B' },
+                    { l: 'Pause', path: 'M6 18.75V5.25A2.25 2.25 0 0 1 8.25 3h7.5a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 15.75 21h-7.5A2.25 2.25 0 0 1 6 18.75ZM9 6v12M15 6v12', c: '#EF4444' },
+                    { l: 'Rewards', path: 'M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.425 4.755 4.115 4.115 0 0 0 3.843 5.372 4.115 4.115 0 0 0 3.843-5.372 50.636 50.636 0 0 0-2.425-4.755m15.482 0a50.636 50.636 0 0 1 2.425 4.755 4.115 4.115 0 0 1-3.843 5.372 4.115 4.115 0 0 1-3.843-5.372 50.636 50.636 0 0 1 2.425-4.755m-15.482 0L12 2.25l10.125 7.897', c: '#8B5CF6' },
                 ].map((a, i) => (
                     <div key={i} className="bg-white rounded-[22px] border border-[#F0F5F2] p-2 aspect-square flex flex-col items-center justify-center shadow-sm active:scale-95 transition-all">
-                        <div className="w-13 h-13 rounded-full flex items-center justify-center text-2xl mb-2" style={{ backgroundColor: a.c + '15', color: a.c }}>{a.i}</div>
+                        <div className="w-13 h-13 rounded-full flex items-center justify-center mb-2" style={{ backgroundColor: a.c + '15', color: a.c }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
+                                <path strokeLinecap="round" strokeLinejoin="round" d={a.path} />
+                            </svg>
+                        </div>
                         <span className="text-[#3F4E4F] text-[11px] font-bold tracking-wide">{a.l}</span>
                     </div>
                 ))}
@@ -267,7 +287,11 @@ const ThreePhoneMockup = () => {
             </div>
 
             <div className="absolute -top-16 -right-20 z-50 bg-white/95 backdrop-blur-md shadow-2xl rounded-[24px] p-6 border border-white/40 flex items-center gap-4 animate-float hidden md:flex" style={{ animationDelay: '-0.8s' }}>
-                <div className="w-14 h-14 bg-gradient-to-br from-[#6B9080] to-[#84A98C] rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg shadow-[#6B9080]/30">🛡️</div>
+                <div className="w-14 h-14 bg-gradient-to-br from-[#6B9080] to-[#84A98C] rounded-2xl flex items-center justify-center text-white shadow-lg shadow-[#6B9080]/30 text-3xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-8 h-8">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z" />
+                    </svg>
+                </div>
                 <div className="pr-4">
                     <p className="text-[11px] text-slate-400 font-bold uppercase tracking-widest leading-none mb-1">Kid Guard App</p>
                     <p className="text-[16px] font-bold text-[#1F2937]">Protection Live</p>

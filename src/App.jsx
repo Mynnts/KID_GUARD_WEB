@@ -246,78 +246,98 @@ const STEPS = [
     step: "01",
     title: "ดาวน์โหลด APK",
     desc: "กดปุ่มดาวน์โหลดบนเว็บไซต์เพื่อรับไฟล์ APK ของ KidGuard ลงบนอุปกรณ์ Android ของทั้งผู้ปกครองและเด็ก",
-    icon: "📥",
+    icon: <DownloadIcon className="w-10 h-10" />,
   },
   {
     step: "02",
     title: "ติดตั้งแอป",
     desc: "เปิดไฟล์ APK ที่ดาวน์โหลดมา อนุญาตการติดตั้งจากแหล่งที่ไม่รู้จัก แล้วกดติดตั้ง",
-    icon: "📲",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+      </svg>
+    ),
   },
   {
     step: "03",
     title: "เชื่อมต่อบัญชี",
     desc: "เปิดแอป เลือกบทบาท (ผู้ปกครอง/เด็ก) ลงทะเบียนหรือเข้าสู่ระบบ แล้วเชื่อมต่อกับอุปกรณ์บุตรหลาน ด้วย PIN 6 หลัก",
-    icon: "🔗",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-10 h-10">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+      </svg>
+    ),
   },
 ];
 
 const PARENT_STEPS = [
   {
-    icon: "👤",
+    icon: <UsersIcon />,
     title: "สมัครสมาชิก",
     desc: 'เลือก "ผู้ปกครอง" → ลงทะเบียนด้วยอีเมลและรหัสผ่าน → ระบบจะสร้าง PIN 6 หลักให้อัตโนมัติ',
   },
   {
-    icon: "👶",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z" />
+      </svg>
+    ),
     title: "เพิ่มโปรไฟล์เด็ก",
     desc: 'กดปุ่ม "เพิ่มเด็ก" → เลือก Avatar → กรอกชื่อเล่นและอายุ → ตั้งเวลาจำกัดต่อวัน → เลือกโหมดดูแล',
   },
   {
-    icon: "📍",
+    icon: <LocationIcon />,
     title: "ติดตามตำแหน่ง",
     desc: "ดูตำแหน่งเรียลไทม์ของเด็กบนแผนที่ อัปเดตอัตโนมัติ",
   },
   {
-    icon: "⏰",
+    icon: <ClockIcon />,
     title: "จัดการเวลาหน้าจอ",
     desc: "ตั้งเวลาจำกัดต่อวัน ดูเวลาที่ใช้ไปและเวลาที่เหลือ สามารถหยุดชั่วคราวได้ทันที",
   },
   {
-    icon: "📊",
+    icon: <AppIcon />,
     title: "ควบคุมแอป",
     desc: "ดูรายการแอปทั้งหมด บล็อกแอปไม่เหมาะสม ค้นหาและรีเฟรชรายการแอปล่าสุด",
   },
   {
-    icon: "📅",
+    icon: <CalendarIcon />,
     title: "จัดตารางเวลา",
     desc: "ตั้งเวลานอนหลับ (Sleep Schedule) และช่วงเวลาสงบ (Quiet Time) เช่น เวลาทำการบ้าน",
   },
   {
-    icon: "🌟",
+    icon: <StarIcon />,
     title: "ระบบรางวัล",
-    desc: "สร้างรางวัลพร้อม Emoji และแต้มที่ต้องสะสม แก้ไข/ลบรางวัลได้ด้วยการกดค้าง",
+    desc: "สร้างรางวัลพร้อมสัญลักษณ์และแต้มที่ต้องสะสม แก้ไข/ลบรางวัลได้ด้วยการกดค้าง",
   },
 ];
 
 const CHILD_STEPS = [
   {
-    icon: "🔗",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M13.19 8.688a4.5 4.5 0 0 1 1.242 7.244l-4.5 4.5a4.5 4.5 0 0 1-6.364-6.364l1.757-1.757m13.35-.622 1.757-1.757a4.5 4.5 0 0 0-6.364-6.364l-4.5 4.5a4.5 4.5 0 0 0 1.242 7.244" />
+      </svg>
+    ),
     title: "เชื่อมต่อกับผู้ปกครอง",
     desc: 'เปิดแอป → เลือก "เด็ก" → กรอก PIN 6 หลักจากผู้ปกครอง → ระบบเชื่อมต่ออัตโนมัติ',
   },
   {
-    icon: "😄",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm6 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Z" />
+      </svg>
+    ),
     title: "สร้างโปรไฟล์",
     desc: 'เลือก Avatar ที่ชอบ → กรอกชื่อเล่นและอายุ → กด "เริ่มต้นใช้งาน"',
   },
   {
-    icon: "🛡️",
+    icon: <ShieldIcon />,
     title: "เปิดโหมดเด็ก",
     desc: "กดเปิดโหมดเด็ก → ระบบนับเวลา/บล็อกแอป/ตารางเวลาทำงานอัตโนมัติ → ปิดได้เฉพาะ PIN ผู้ปกครอง",
   },
   {
-    icon: "⭐",
+    icon: <StarIcon />,
     title: "ดูแต้มสะสม",
     desc: "ดูแต้มที่มีและรางวัลที่แลกได้ พร้อมเวลาหน้าจอคงเหลือในหน้าหลัก",
   },
@@ -628,7 +648,9 @@ function HowToUse() {
                 <div className="absolute -top-4 -right-2 w-10 h-10 bg-gradient-to-br from-sage-500 to-sage-700 rounded-xl flex items-center justify-center text-white text-sm font-bold shadow-lg shadow-sage-500/30 rotate-3 group-hover:rotate-0 transition-transform">
                   {s.step}
                 </div>
-                <div className="text-5xl mb-5">{s.icon}</div>
+                <div className="w-16 h-16 mx-auto bg-gradient-to-br from-sage-100 to-sage-200 rounded-2xl flex items-center justify-center text-sage-600 mb-5 group-hover:scale-110 transition-transform shadow-sm">
+                  {s.icon}
+                </div>
                 <h3 className="text-xl font-bold text-sage-800 mb-3">
                   {s.title}
                 </h3>
@@ -653,21 +675,24 @@ function HowToUse() {
           <div className="flex justify-center gap-3 mb-10">
             <button
               onClick={() => setActiveTab("parent")}
-              className={`px-6 py-3 rounded-2xl font-semibold text-sm transition-all ${activeTab === "parent"
+              className={`px-6 py-3 rounded-2xl font-semibold text-sm transition-all flex items-center gap-2 ${activeTab === "parent"
                 ? "bg-gradient-to-r from-sage-600 to-sage-700 text-white shadow-lg shadow-sage-500/30"
                 : "bg-white text-sage-600 border border-sage-200 hover:border-sage-400"
                 }`}
             >
-              👨‍👩‍👦 ฝั่งผู้ปกครอง
+              <UsersIcon /> สำหรับผู้ปกครอง
             </button>
             <button
               onClick={() => setActiveTab("child")}
-              className={`px-6 py-3 rounded-2xl font-semibold text-sm transition-all ${activeTab === "child"
+              className={`px-6 py-3 rounded-2xl font-semibold text-sm transition-all flex items-center gap-2 ${activeTab === "child"
                 ? "bg-gradient-to-r from-sage-600 to-sage-700 text-white shadow-lg shadow-sage-500/30"
                 : "bg-white text-sage-600 border border-sage-200 hover:border-sage-400"
                 }`}
             >
-              👶 ฝั่งเด็ก
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm6 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Z" />
+              </svg>
+              สำหรับเด็ก
             </button>
           </div>
 
@@ -680,7 +705,7 @@ function HowToUse() {
                   className="glass rounded-2xl p-6 hover:shadow-lg hover:shadow-sage-200/30 transition-all duration-300 hover:-translate-y-1 group"
                 >
                   <div className="flex items-center gap-3 mb-3">
-                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sage-100 to-sage-200 flex items-center justify-center text-xl group-hover:scale-110 transition-transform">
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-sage-100 to-sage-200 flex items-center justify-center text-sage-600 group-hover:scale-110 transition-transform">
                       {item.icon}
                     </div>
                     <div className="flex items-center gap-2">
@@ -704,8 +729,10 @@ function HowToUse() {
           className={`mt-16 glass rounded-2xl p-6 max-w-2xl mx-auto ${inView ? "animate-fade-in-up delay-600" : "opacity-0"}`}
         >
           <div className="flex items-start gap-4">
-            <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0 text-xl">
-              ⚠️
+            <div className="w-10 h-10 rounded-xl bg-amber-100 flex items-center justify-center flex-shrink-0 text-amber-600">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
+              </svg>
             </div>
             <div>
               <h4 className="font-bold text-sage-800 mb-1">
@@ -758,10 +785,12 @@ function DownloadSection() {
           {/* Team Members — Full Width Top Row */}
           <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-sage-700/30 hover:border-sage-500/40 transition-colors mb-8">
             <div className="flex items-center gap-3 mb-8 justify-center">
-              <div className="w-10 h-10 rounded-xl bg-sage-600/30 flex items-center justify-center text-xl">
-                👥
+              <div className="w-10 h-10 rounded-xl bg-sage-600/30 flex items-center justify-center text-sage-300">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" />
+                </svg>
               </div>
-              <h4 className="text-lg font-bold text-white">ทีมผู้พัฒนา</h4>
+              <h4 className="text-lg font-bold text-white tracking-wide">ทีมผู้พัฒนาแอปพลิเคชัน</h4>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
               {[
@@ -793,12 +822,12 @@ function DownloadSection() {
             {/* Advisors */}
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-sage-700/30 hover:border-sage-500/40 transition-colors">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-sage-600/30 flex items-center justify-center text-xl">
-                  🎓
+                <div className="w-10 h-10 rounded-xl bg-sage-600/30 flex items-center justify-center text-sage-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.425 4.755 4.115 4.115 0 0 0 3.843 5.372 4.115 4.115 0 0 0 3.843-5.372 50.636 50.636 0 0 0-2.425-4.755m15.482 0a50.636 50.636 0 0 1 2.425 4.755 4.115 4.115 0 0 1-3.843 5.372 4.115 4.115 0 0 1-3.843-5.372 50.636 50.636 0 0 1 2.425-4.755m-15.482 0a50.636 50.636 0 0 1 2.425 4.755 4.115 4.115 0 0 1-3.843 5.372 4.115 4.115 0 0 1-3.843-5.372 50.636 50.636 0 0 1 2.425-4.755m-15.482 0L12 2.25l10.125 7.897" />
+                  </svg>
                 </div>
-                <h4 className="text-lg font-bold text-white">
-                  อาจารย์ที่ปรึกษา
-                </h4>
+                <h4 className="text-lg font-bold text-white">อาจารย์ที่ปรึกษา</h4>
               </div>
               <ul className="space-y-4">
                 <li className="flex items-start gap-3">
@@ -855,8 +884,10 @@ function DownloadSection() {
             {/* University */}
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-sage-700/30 hover:border-sage-500/40 transition-colors">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-xl bg-sage-600/30 flex items-center justify-center text-xl">
-                  🏫
+                <div className="w-10 h-10 rounded-xl bg-sage-600/30 flex items-center justify-center text-sage-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 21v-8.25M15.75 21v-8.25M8.25 21v-8.25M3 9l9-6 9 6m-1.5 12V10.332A48.36 48.36 0 0 0 12 9.75c-2.551 0-5.056.2-7.5.582V21M3 21h18M12 6.75h.008v.008H12V6.75Z" />
+                  </svg>
                 </div>
                 <h4 className="text-lg font-bold text-white">สถาบันการศึกษา</h4>
               </div>
@@ -891,12 +922,13 @@ function DownloadSection() {
             {/* Tech Stack */}
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-sage-700/30 hover:border-sage-500/40 transition-colors md:col-span-2">
               <div className="flex items-center gap-3 mb-6 justify-center">
-                <div className="w-10 h-10 rounded-xl bg-sage-600/30 flex items-center justify-center text-xl">
-                  ⚙️
+                <div className="w-10 h-10 rounded-xl bg-sage-600/30 flex items-center justify-center text-sage-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.324.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 0 1 1.37.49l1.296 2.247a1.125 1.125 0 0 1-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 0 1 0 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 0 1-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 0 1-.22.128c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 0 1-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 0 1-1.369-.49l-1.297-2.247a1.125 1.125 0 0 1 .26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 0 1 0-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 0 1-.26-1.43l1.297-2.247a1.125 1.125 0 0 1 1.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.087.22-.128.332-.183.582-.495.644-.869l.214-1.281Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>
                 </div>
-                <h4 className="text-lg font-bold text-white">
-                  เครื่องมือที่ใช้พัฒนา
-                </h4>
+                <h4 className="text-lg font-bold text-white">เครื่องมือที่ใช้พัฒนา</h4>
               </div>
               <div className="grid grid-cols-3 gap-4 max-w-md mx-auto">
                 {/* Flutter */}
