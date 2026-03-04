@@ -711,23 +711,110 @@ function HowToUse() {
           </div>
         </div>
 
-        {/* Permission Notice */}
-        <div
-          className={`mt-24 glass rounded-[2.5rem] p-10 max-w-3xl mx-auto border-amber-100/50 ${inView ? "animate-fade-in-up delay-600" : "opacity-0"}`}
-        >
-          <div className="flex flex-col sm:flex-row items-center sm:items-start gap-8 text-center sm:text-left">
-            <div className="w-20 h-20 rounded-[2rem] bg-amber-50 flex items-center justify-center flex-shrink-0 text-amber-500 shadow-inner">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-10 h-10">
+        {/* ── Installation Guide Section ── */}
+        <div className={`mt-24 max-w-4xl mx-auto ${inView ? "animate-fade-in-up delay-600" : "opacity-0"}`}>
+          {/* Section Header */}
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center gap-2 bg-amber-50 px-5 py-2 rounded-full text-xs font-bold tracking-widest uppercase text-amber-600 border border-amber-100 mb-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-4 h-4">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9 3.75h.008v.008H12v-.008Z" />
               </svg>
+              สำคัญ — อ่านก่อนติดตั้ง
             </div>
-            <div>
-              <h4 className="text-2xl font-black text-sage-900 mb-3">
-                การอนุญาตติดตั้ง APK
-              </h4>
-              <p className="text-sage-600 text-lg leading-relaxed font-medium">
-                เนื่องจากแอปยังไม่ได้อยู่บน Play Store กรุณาเปิดอนุญาตให้ <span className="text-sage-900 font-bold">"ติดตั้งจากแหล่งที่ไม่รู้จัก"</span> ในส่วนของ <span className="bg-amber-100 px-2 rounded-md font-bold">ตั้งค่า → ความปลอดภัย</span> เพื่อเริ่มใช้งาน
+            <h3 className="text-3xl sm:text-4xl font-black text-sage-950 mb-3">
+              คู่มือติดตั้ง APK
+            </h3>
+            <p className="text-sage-500 text-lg font-medium max-w-2xl mx-auto">
+              เนื่องจากแอปยังไม่ได้อยู่บน Play Store จึงต้องตั้งค่าเล็กน้อยก่อนติดตั้ง
+            </p>
+          </div>
+
+          {/* Card 1: Allow Unknown Sources */}
+          <div className="glass rounded-[2.5rem] p-10 border border-amber-100/50 mb-8">
+            <div className="flex items-center gap-5 mb-8">
+              <div className="w-16 h-16 rounded-[1.5rem] bg-gradient-to-br from-amber-400 to-amber-500 flex items-center justify-center flex-shrink-0 text-white shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-8 h-8">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-2xl font-black text-sage-900">อนุญาตติดตั้งจากแหล่งที่ไม่รู้จัก</h4>
+                <p className="text-sage-500 text-sm font-medium mt-1">ขั้นตอนเปิดสิทธิ์ติดตั้งไฟล์ APK</p>
+              </div>
+            </div>
+
+            <div className="space-y-5">
+              {[
+                { step: "1", text: <>เปิด <span className="bg-sage-100 text-sage-800 px-2.5 py-0.5 rounded-lg font-bold text-sm">ตั้งค่า (Settings)</span> บนมือถือ</> },
+                { step: "2", text: <>ไปที่ <span className="bg-sage-100 text-sage-800 px-2.5 py-0.5 rounded-lg font-bold text-sm">แอป & การแจ้งเตือน</span> หรือ <span className="bg-sage-100 text-sage-800 px-2.5 py-0.5 rounded-lg font-bold text-sm">ความปลอดภัย</span> (แล้วแต่ยี่ห้อมือถือ)</> },
+                { step: "3", text: <>เลือก <span className="bg-sage-100 text-sage-800 px-2.5 py-0.5 rounded-lg font-bold text-sm">การเข้าถึงพิเศษ → ติดตั้งแอปที่ไม่รู้จัก</span></> },
+                { step: "4", text: <>เลือกแอปที่ใช้ดาวน์โหลด (เช่น <span className="font-bold text-sage-900">Chrome</span> หรือ <span className="font-bold text-sage-900">Files</span>) แล้วเปิด <span className="text-sage-900 font-bold">"อนุญาตจากแหล่งนี้"</span></> },
+                { step: "5", text: <>กลับไปเปิดไฟล์ <span className="font-bold text-sage-900">KidGuard.apk</span> ที่ดาวน์โหลดมา แล้วกด <span className="font-bold text-sage-900">"ติดตั้ง"</span></> },
+              ].map((item) => (
+                <div key={item.step} className="flex items-start gap-4 bg-white/60 p-5 rounded-2xl border border-sage-100 hover:bg-white hover:shadow-md transition-all group">
+                  <div className="w-10 h-10 rounded-xl bg-sage-900 flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform">
+                    {item.step}
+                  </div>
+                  <p className="text-sage-700 font-medium leading-relaxed pt-1.5">{item.text}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Quick Tip */}
+            <div className="mt-6 bg-sage-50 rounded-2xl p-5 border border-sage-100 flex items-start gap-4">
+              <div className="w-8 h-8 rounded-lg bg-sage-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-5 h-5 text-sage-700">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 0 0 1.5-.189m-1.5.189a6.01 6.01 0 0 1-1.5-.189m3.75 7.478a12.06 12.06 0 0 1-4.5 0m3.75 2.383a14.406 14.406 0 0 1-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 1 0-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+                </svg>
+              </div>
+              <p className="text-sage-600 text-sm font-medium leading-relaxed">
+                <span className="font-bold text-sage-800">เคล็ดลับ:</span> เมนูอาจแตกต่างกันไปตามยี่ห้อมือถือ หากหาไม่เจอให้ลองค้นหาคำว่า <span className="bg-white px-2 py-0.5 rounded-md font-bold text-sage-800 border border-sage-200">"ติดตั้งแอปที่ไม่รู้จัก"</span> ในช่องค้นหาของตั้งค่า
               </p>
+            </div>
+          </div>
+
+          {/* Card 2: Disable Google Play Protect */}
+          <div className="glass rounded-[2.5rem] p-10 border border-blue-100/50">
+            <div className="flex items-center gap-5 mb-8">
+              <div className="w-16 h-16 rounded-[1.5rem] bg-gradient-to-br from-blue-400 to-blue-500 flex items-center justify-center flex-shrink-0 text-white shadow-lg">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-8 h-8">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 3l8.735 8.735m0 0a.374.374 0 11.53.53m-.53-.53l.53.53m0 0L21 21M14.652 9.348a3.75 3.75 0 010 5.304m2.121-7.425a6.75 6.75 0 010 9.546m2.122-11.667a9.75 9.75 0 010 13.788" />
+                </svg>
+              </div>
+              <div>
+                <h4 className="text-2xl font-black text-sage-900">ปิด Google Play Protect <span className="text-sm font-bold text-blue-500">(ชั่วคราว)</span></h4>
+                <p className="text-sage-500 text-sm font-medium mt-1">หากติดตั้งแล้วขึ้นคำเตือน "แอปนี้อาจเป็นอันตราย"</p>
+              </div>
+            </div>
+
+            {/* Warning Banner */}
+            <div className="bg-blue-50 rounded-2xl p-5 border border-blue-100 mb-8 flex items-start gap-4">
+              <div className="w-8 h-8 rounded-lg bg-blue-200 flex items-center justify-center flex-shrink-0 mt-0.5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" className="w-5 h-5 text-blue-700">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="m11.25 11.25.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Zm-9-3.75h.008v.008H12V8.25Z" />
+                </svg>
+              </div>
+              <p className="text-blue-700 text-sm font-medium leading-relaxed">
+                Google Play Protect อาจบล็อกการติดตั้งแอปที่ไม่ได้มาจาก Play Store เนื่องจากแอปของเรายังอยู่ในขั้นตอนพัฒนา แอปจึงยังไม่ได้ลงทะเบียนกับ Google ถือว่าปลอดภัย — <span className="font-bold">ติดตั้งเสร็จแล้วเปิด Play Protect กลับได้เลย</span>
+              </p>
+            </div>
+
+            <div className="space-y-5">
+              {[
+                { step: "1", text: <>เปิดแอป <span className="font-bold text-sage-900">Google Play Store</span> บนมือถือ</> },
+                { step: "2", text: <>แตะ <span className="font-bold text-sage-900">รูปโปรไฟล์</span> ที่มุมขวาบน → เลือก <span className="bg-blue-50 text-blue-800 px-2.5 py-0.5 rounded-lg font-bold text-sm border border-blue-100">Play Protect</span></> },
+                { step: "3", text: <>แตะ <span className="font-bold text-sage-900">ไอคอนรูปเฟือง ⚙️</span> ที่มุมขวาบน</> },
+                { step: "4", text: <>ปิดสวิตช์ <span className="bg-red-50 text-red-700 px-2.5 py-0.5 rounded-lg font-bold text-sm border border-red-100">"สแกนแอปด้วย Play Protect"</span> แล้วกดยืนยัน</> },
+                { step: "5", text: <>กลับไป<span className="font-bold text-sage-900">ติดตั้ง KidGuard.apk</span> ได้ตามปกติ</> },
+                { step: "6", text: <>✅ <span className="font-bold text-emerald-700">หลังติดตั้งเสร็จ</span> → กลับไปเปิด Play Protect เหมือนเดิม เพื่อความปลอดภัย</> },
+              ].map((item) => (
+                <div key={item.step} className="flex items-start gap-4 bg-white/60 p-5 rounded-2xl border border-sage-100 hover:bg-white hover:shadow-md transition-all group">
+                  <div className={`w-10 h-10 rounded-xl flex items-center justify-center text-white font-black text-sm flex-shrink-0 group-hover:scale-110 transition-transform ${item.step === "6" ? "bg-emerald-600" : "bg-blue-600"}`}>
+                    {item.step === "6" ? "✓" : item.step}
+                  </div>
+                  <p className="text-sage-700 font-medium leading-relaxed pt-1.5">{item.text}</p>
+                </div>
+              ))}
             </div>
           </div>
         </div>
